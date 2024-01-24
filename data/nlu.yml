@@ -1,0 +1,62 @@
+version: "2.0"
+
+nlu:
+
+# - intent: buy_pizza
+#   examples: |
+#     - Tôi muốn mua pizza
+#     - buy pizza
+ 
+# - intent: inform
+#   examples: |
+  
+#     - [xl](pizza_size)
+#     - [xl](pizza_size)
+#     - [small](pizza_size)
+#     - [s](pizza_size)
+#     - [pepperoni](pizza_type)
+
+- intent: greet
+  examples: |
+    - Xin chào
+    - Xin chào
+    - Hi
+    - hi
+    - chào
+    - hỗ trợ
+    - hellu
+
+
+- intent: register
+  examples: |
+    - Mình đăng ký
+    - Đăng ký khoá học
+    - Khoá học đăng ký
+    - Khoá học
+    - Tôi muốn đăng ký khóa học
+    - Đăng ký khóa học
+    - Cho mình đăng ký khóa học
+    - Mình quyết định đăng ký khóa học
+    - Em muốn đăng ký khoá học
+    - khoá học
+    - khoa học
+    - đăng ký
+    - đăng ký khoá học
+    - học
+    - đăng ký khoa hoc
+
+
+- intent: form_dk
+  examples: |
+    - Mã số sinh viên của mình là [B1910722](mssv_sv)
+    - MSSV: [B1910722](mssv_sv)
+    - Mã số sinh viên: [B1910722](mssv_sv)
+    - [B1910722](mssv_sv) là mã số sinh viên của mình
+    - Mã môn học đăng ký [DI19V7F1](mamon_monhoc)
+    - Mã môn [DI19V7F1](mamon_monhoc)
+    - Mã môn: [DI19V7F1](mamon_monhoc)
+
+
+
+
+

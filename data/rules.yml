@@ -1,0 +1,43 @@
+rules:
+# - rule: Activate Pizza Form
+#   steps:
+#   - intent: buy_pizza
+#   - action: simple_pizza_form
+#   - active_loop: simple_pizza_form
+
+# - rule: Submit Pizza Form
+#   # Ensure that we're starting from an active loop
+#   condition:
+#   - active_loop: simple_pizza_form
+#   steps:
+#   - action: simple_pizza_form
+#   # If there are no more requested slots
+#   - active_loop: null
+#   - slot_was_set:
+#     - requested_slot: null
+#   # Then submit the form
+#   - action: utter_submit
+#   - action: utter_pizza_slots
+
+
+
+#form
+# - rule: ho_noidung_form
+#   steps:
+#   - intent: register
+#   - action: simple_form
+#   - active_loop: simple_form
+
+# - rule: XACNHAN
+#   # Ensure that we're starting from an active loop
+#   condition:
+#   - active_loop: simple_form
+#   steps:
+#   - action: simple_form
+#   # If there are no more requested slots
+#   - active_loop: null
+#   - slot_was_set:
+#     - requested_slot: null
+#   # Then submit the form
+#   - action: utter_submit_form
+#   - action: utter_form_dang_ky_slots

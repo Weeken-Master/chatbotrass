@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+
+  <div id="webchat">
+    ss
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/rasa-webchat/lib/index.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://">
+  <script>!(function () {
+    let e = document.createElement("script"),
+      t = document.head || document.getElementsByTagName("head")[0];
+    (e.src =
+     "https://cdn.jsdelivr.net/npm/rasa-webchat@1.0.1/lib/index.js"),
+      (e.async = !0),
+      (e.onload = () => {
+        window.WebChat.default(
+          { 
+            selector: "#webchat",
+      initPayload: "/greet",
+      customData: {"language": "vi"}, // arbitrary custom data. Stay minimal as this will be added to the socket
+      socketUrl: "http://localhost:5005",
+      customMessageDelay: (message) => {
+      let delay = message.length * 30;
+      if (delay > 3 * 200) delay = 3 * 200;
+      if (delay < 100) delay = 100;
+      return delay;
+    },
+      
+      socketPath: "/socket.io/",
+      title: "Hệ thống hỗ trợ",
+      tooltipPayload: "/greet",
+      tooltip: true,    
+      tooltipDelay: 500,
+      subtitle: "TUẦN ĐẸP ZAI",
+      connectingText: "Waiting for server...",
+      // profileAvatar: "https://",
+      // openLauncherImage: "https://",
+  
+      params: {"storage": "session"}, 
+      
+      // mainColor: "#ffd600",
+      // userBackgroundColor: "#ffd600",
+      // userTextColor: "#black",
+      showMessageDate: false,
+      inputTextFieldHint: "Xin chào! Nhập tin nhắn tại đây",
+      badge: " ",
+      displayUnreadCount: true,
+      isChatOpen: false,
+      embedded: false,
+      showCloseButton: true,
+      fullScreenMode: true,
+      showFullScreenButton: true,
+      docViewer: false,
+      
+     
+          },
+          null
+        );
+      }),
+      t.insertBefore(e, t.firstChild);
+  })();
+  
+  
+  
+  </script>
+</body>
+</html>

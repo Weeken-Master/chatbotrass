@@ -1,0 +1,57 @@
+version: "2.0"
+
+intents:
+
+  - greet
+  - register
+  - form_dk
+
+entities:
+  
+  - mssv_sv
+  - mamon_monhoc
+
+slots:
+  mssv_sv:
+    type: text
+    influence_conversation: true
+  mamon_monhoc:
+    type: text
+    influence_conversation: true
+
+forms:
+  simple_form:
+    required_slots:
+      mssv_sv:
+      - entity: mssv_sv
+        type: from_entity
+      mamon_monhoc:
+      - entity: mamon_monhoc
+        type: from_entity
+
+
+responses:
+  utter_ask_massvand_mamon:
+  - text: "Vui lòng cho biết Mã số sinh viên và Mã môn đăng ký?\n Theo mẫu dưới:\n  MSSV: mã số, Mã môn: mã số\n" 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+actions:
+  - validate_simple_dang_ky_form
+  - action_tinhnang

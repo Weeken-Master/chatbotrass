@@ -1,0 +1,27 @@
+version: "2.0"
+
+stories:
+
+- story: c_p1_a
+  steps:
+  - intent: greet
+  - action: action_tinhnang
+
+
+- story: c_p1_b
+  steps:
+  - intent: greet
+  - action: action_tinhnang
+  - intent: register 
+  - action: utter_ask_massvand_mamon
+  - intent: form_dk
+  - action: validate_simple_dang_ky_form
+ 
+
+- story: c_p1_c
+  steps:
+  - intent: register 
+  - action: utter_ask_massvand_mamon
+  - intent: form_dk
+  - action: validate_simple_dang_ky_form
+ 
